@@ -9,13 +9,13 @@ interface Prop {
   text: string
   level?: HeadingLevel
 }
+const BaseHeading = styled.h1`
+  background-color: black;
+  color: white;
+`
 
 export const Heading: React.FC<Prop> = ({ text, level }) => {
   const name = level ? (`h${level}` as HeadingTag) : 'p'
-  const Tag = styled[name]`
-    background-color: black;
-    color: white;
-  `
 
-  return <Tag>{text}</Tag>
+  return <BaseHeading as={name}>{text}</BaseHeading>
 }
