@@ -1,4 +1,5 @@
 import React from '/web_modules/react.js'
+import styled from '/web_modules/styled-components.js'
 
 // 手間だなぁ
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6
@@ -10,7 +11,11 @@ interface Prop {
 }
 
 export const Heading: React.FC<Prop> = ({ text, level }) => {
-  const Tag = level ? (`h${level}` as HeadingTag) : 'p'
+  const name = level ? (`h${level}` as HeadingTag) : 'p'
+  const Tag = styled[name]`
+    background-color: black;
+    color: white;
+  `
 
   return <Tag>{text}</Tag>
 }
