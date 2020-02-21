@@ -1,0 +1,34 @@
+{
+  "name": "snowpack-test",
+  "version": "1.0.0",
+  "description": "Snowpack + React + TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm run watch & npm run serve",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "serve": "servor public index.html 8080 --reload --browse",
+    "snowpack": "npx snowpack --dest public/web_modules --clean",
+    "snowpack:prod": "npm run snowpack -- --optimize --no-source-map"
+  },
+  "keywords": [],
+  "author": "Yu Nozato",
+  "license": "ISC",
+  "dependencies": {
+    "react": "npm:@pika/react@^16.12.2",
+    "react-dom": "npm:@pika/react-dom@^16.12.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.21",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.3",
+    "prettier": "^1.19.1",
+    "servor": "^3.2.0",
+    "typescript": "^3.8.2"
+  }
+}
