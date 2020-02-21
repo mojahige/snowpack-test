@@ -9,7 +9,7 @@
     "watch": "tsc -w",
     "serve": "servor public index.html 8080 --reload --browse",
     "snowpack": "npx snowpack --dest public/web_modules --clean",
-    "snowpack:prod": "npm run snowpack -- --optimize --no-source-map"
+    "snowpack:build": "npm run snowpack -- --optimize --no-source-map"
   },
   "keywords": [],
   "author": "Yu Nozato",
