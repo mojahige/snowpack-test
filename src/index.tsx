@@ -1,7 +1,12 @@
 import React from '/web_modules/react.js'
 import ReactDOM from '/web_modules/react-dom.js'
+import { Heading } from './components/heading.js'
 
-const App = () => <h1>Hello, world!</h1>
+const App = () => (
+  <>
+    <Heading text="Hello World" level={1} />
+  </>
+)
 
 const init = () => {
   const root = document.getElementById('root')
